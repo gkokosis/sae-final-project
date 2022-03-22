@@ -1,0 +1,111 @@
+/* This CSS file sets the styles specific for the login and registration page */
+
+@charset "utf-8";
+
+/* Login form */
+#login_container {
+	width: 100%;
+	max-width: 500px;
+	padding-bottom: 100px;
+}
+
+#login_container p.error {
+	height: 40px;
+}
+
+#login_container p.link {
+	text-align: right;
+}
+
+#login_container p.link a {
+	color: #01597c;
+}
+
+#login_form input[type="submit"] {
+	margin-top: 35px;
+}
+
+
+/* Registration form */
+#registration_container {
+	width: 100%;
+	max-width: 700px;
+}
+
+#registration_container input[type="submit"] {	
+	margin-top: 10px;
+}
+
+#registration_container p.link {
+	margin-top: 40px;
+	text-align: right;
+}
+
+#registration_container p.link a {
+	color: #01597c;
+}
+
+#register_submit {
+	padding: 0 10px;
+}
+
+.entry {
+	padding: 0 10px;
+	width: 50%;
+	min-width: 300px;
+}
+
+/* Thank you page */
+#thanks_container {
+	width: 100%;
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 0;
+	background-color: #183150;
+}
+
+#thanks_container h1 {
+	background-color: #2e4a6d;
+	padding: 20px;
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: 300;
+	text-align: center;
+}
+
+#goto_login {
+	padding: 0 50px 20px 50px;
+}
+
+#goto_login p {
+	color: #cccccc;
+}
+
+#goto_login p.link {
+	margin-top: 40px;
+	text-align: right;
+}
+
+#goto_login p.link a {
+	color: #af6414;
+}
+
+@media screen and (orientation: portrait) and (min-resolution: 192dpi) {
+
+	#login_container {
+		max-width: 800px;
+	}
+
+	#registration_container {
+		max-width: 900px;
+	}
+
+	#login_container p.error {
+		height: 60px;
+	}
+
+	#login_container p.link a, #registration_container p.link a {
+		font-size: 2.2em;
+	}
+
+}

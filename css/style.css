@@ -1,0 +1,1007 @@
+/* CSS document */
+
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:300,400,500,700');
+
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+
+/* ---------------------------- Universal styles ----------------------------- */
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.left {
+	float: left;
+}
+
+.visible {
+	display: block;
+}
+
+.invisible {
+	display: none;
+}
+
+main {
+	background-color: #fffcf8;
+}
+
+main div.container {
+	padding: 30px;
+}
+
+
+/* Headings */
+.title {
+	font-family: 'Roboto', sans-serif;
+	color: #3d6800;
+}
+
+h1.title {
+	font-size: 60px;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 45px;
+}
+
+h2.title {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+h3.title {
+	font-size: 30px;
+	color: #01597c;
+	margin: 15px 0;
+}
+
+h4.title {
+	font-size: 25px;
+	color: #01597c;
+	margin: 10px 0;
+}
+
+h5.title {
+	font-size: 22px;
+	color: #001f29;
+	margin: 10px 0;
+	font-weight: 700;
+}
+
+/* Paragraphs */
+main p {
+	color: #5a5a5a;
+	font-size: 1.2em;
+}
+
+p.error {
+	height: 20px;
+	color: #d00000;
+	font-size: 15px;
+	font-weight: 400;
+	text-align: right;
+}
+
+/* Forms and inputs */
+input {
+	display: block;
+	width: 100%;
+	height: 40px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	border: 1px solid #01597c;
+	border-radius: 2px;
+	outline: none;
+	font-weight: 300;
+	font-size: 20px;
+}
+
+label {
+	color: #01597c;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+input[type="submit"] {
+	border: none;
+	border-radius: none;
+	-webkit-border-radius: none;
+	-webkit-appearance: none;
+}
+
+
+input[type="submit"] {
+	height: 45px;
+	background-color: #3d6800;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 700;
+	border: none;
+	border-radius: 2px;
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+}
+
+/* Tables */
+table {
+	width: 100%;
+	max-width: 1000px;
+	margin: 50px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #afafaf;
+}
+
+tr:nth-child(even) {background-color: #dfe6e8}
+
+tr:nth-child(odd) {background-color: #fff;}
+
+th {
+	color: #5a5a5a;
+	background-color: #01597c;
+	color: #fff;
+	font-size: 1.3em;
+	padding: 15px 25px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}
+
+td {
+	color: #5a5a5a;
+	font-size: 1.2em;
+	padding: 10px 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* ---------------------------- Header ----------------------------- */
+
+/* Styling of the logo section */
+#logo {
+	width: 170px;
+	height: 170px;
+	background-image: url("../assets/logo.png");
+	background-size: contain;
+}
+
+#logo a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Styling of the login options */
+#login_icon {
+	position: absolute;
+	z-index: 99;
+	right: 50px;
+	bottom: -100px;
+	width: 80px;
+	height: 80px;
+}
+
+#login_icon.logged_in {
+	background-image: url("../assets/logged_in_icon.png");
+	background-size: contain;
+}
+
+#login_icon.logged_out {
+	background-image: url("../assets/logged_out_icon.png");
+	background-size: contain;
+}
+
+#login_icon:hover {
+	cursor: pointer;
+}
+
+#login_options {
+	position: absolute;
+	z-index: 99;
+	display: none;
+	top: 110px;
+	right: 50px;
+	width: 300px;
+	padding: 20px;
+	background-color: #003242;
+}
+
+#login_options p.hello {
+	color: #de8823;
+	font-size: 2em;
+	text-align: center;
+	border-bottom: 1px solid #949494;
+	padding-bottom: 10px;
+}
+
+#login_options p a {
+	display: block;
+	margin: 10px;
+	color: #a1b3bb;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+#login_options p a:hover {
+	color: #de8823;
+}
+
+#social_icons {
+	text-align: center;
+}
+
+#facebook, #twitter {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin: 20px 10px 0 10px;
+}
+
+#facebook {
+	background-image: url("../assets/facebook_grey_40.png");
+	background-size: contain;
+}
+
+#facebook:hover {
+	background-image: url("../assets/facebook_blue_40.png");
+}
+
+#twitter {
+	background-image: url("../assets/twitter_grey_40.png");
+	background-size: contain;
+}
+
+#twitter:hover {
+	background-image: url("../assets/twitter_blue_40.png");
+}
+
+#facebook p, #twitter p {
+	display: none;
+}
+
+#facebook a, #twitter a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* Styling of the nav header */
+#nav_header {
+	background-color: #01597c;
+	color: #FFF;
+}
+
+nav ul.menu {
+	float: right;
+}
+
+nav ul.menu li {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background-color: #01597c;
+	font-size: 1.3em;
+}
+
+nav ul.menu li:hover {
+	background-color: #003242;
+	cursor: pointer;
+}
+
+nav ul.menu li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul.menu li ul.sub_menu {
+	position: absolute;
+	left: 0;
+	display: none;
+	z-index: 99;
+	background-color: #01597c;
+	font-size: 0.8em;
+}
+
+nav ul.menu li ul.sub_menu li {
+	width: 100%;
+	font-size: 1.2em;
+}
+
+nav ul.menu li:hover > ul.sub_menu {
+	display: block;
+}
+
+
+/* ---------------------------- Home page ----------------------------- */
+
+div.resource {
+	width: 48%;
+	margin: 1%;
+	float: left;
+	padding: 20px;
+}
+
+div.resource img {
+	width: 100%;
+	height: auto;
+}
+
+div.resource a {
+	display: block;
+	width: 100%;
+}
+
+div.resource a:hover {
+	background-color: #3d6800;
+}
+
+td.weekdays , td.weekends {
+	text-align: center;
+}
+
+
+/* ---------------------------- Activity page ----------------------------- */
+
+
+.test {
+	display: none; /* This is for testing and should be removed for the final version */
+}
+
+div#single_activity img {
+	display: block;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+div.description {
+	padding-top: 50px;
+}
+
+/* Styles for the admin */
+section#admin_panel {
+	background-color: #e0e0e0;
+}
+
+div.admin_options {
+	padding: 50px 10px 0 10px;
+	text-align: center;
+}
+
+div.admin_options p {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+div.admin_options p a {
+	display: block;
+	width: 300px;
+	padding: 20px;
+	background-color: #01597c;
+	color: #fff;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+div.admin_options p a:hover {
+	background-color: #003242;
+}
+
+/* Styles for unregistered users */
+div.user_options {
+	padding: 50px 10px 0 10px;
+	text-align: center;
+}
+
+div.user_options p {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+div.user_options p a {
+	display: block;
+	width: 300px;
+	padding: 20px;
+	background-color: #01597c;
+	color: #fff;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+div.user_options p a:hover {
+	background-color: #003242;
+}
+
+/* Classes for the booking system */
+form#booking_system {
+	padding-top: 30px;
+}
+
+div.day {
+	margin: 20px;
+}
+
+div.day input {
+	display: none;
+}
+
+div.day label {
+	display: block;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #fff;
+	color: #003242;
+	border: 1px solid #003242;
+	text-align: center;
+	font-size: 1.3em;
+	padding: 15px 0;
+}
+
+div.day label:hover {
+	background-color: #bcccd4;
+	cursor: pointer;
+}
+
+div.day input[type="radio"]:checked + label {
+	background-color: #003242;
+	color: #fff;
+}
+
+div.day label.unavailable {
+	background-color: #782C18;
+}
+
+div.day label.unavailable:hover {
+	background-color: #782C18;
+	cursor: default;
+}
+
+div#booking_submit {
+	margin-top: 50px;
+}
+
+div#booking_submit input {
+	height: auto;
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #3d6800;
+	color: white;
+	text-align: center;
+	font-size: 1.3em;
+	padding: 20px 0;
+	cursor: pointer;
+}
+
+div.error_box {
+	padding-top: 30px;
+}
+
+div.error_box p.error {
+	text-align: center;
+	font-size: 1.3em;
+}
+
+/* ---------------------------- Facilities page ----------------------------- */
+
+p.facilities {
+	padding: 20px 0;
+}
+
+p.facilities.last {
+	padding-bottom: 0;
+}
+
+p.facility_description {
+	padding: 5px 20px;
+}
+
+/* Lightbox styles */
+#lightbox {
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.95);
+}
+
+#image_container {
+	z-index: 101;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 1000px;
+	max-width: 90%
+}
+
+img.thumbnail {
+	display: block;
+	width: 25%;
+	padding: 5px;
+	float: left;
+}
+
+img.thumbnail:hover {
+	cursor: pointer;
+}
+
+img.fullsize {
+	width:100%;
+}
+
+.gallery_controls {
+	position: absolute;
+	top: 0;
+	width: 15%;
+	height: 100%;
+	margin: 0;
+}
+
+.gallery_controls:hover {
+	background-color: rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+
+#next {
+	right: 0;
+	background-image: url("../assets/next.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#previous {
+	left: 0;
+	background-image: url("../assets/previous.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/* ---------------------------- Contact page ----------------------------- */
+
+p.contact_info span.tel {
+	display: inline-block;
+	font-weight: 600;
+}
+
+/* Contact form */
+#form_container {
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+#form_container textarea {
+	display: block;
+	width: 100%;
+	min-height: 100px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #01597c;
+	border-radius: 2px;
+	outline: none;
+	font-weight: 300;
+	font-size: 20px;
+	font-family: sans-serif;
+	resize: vertical;
+}
+
+#form_container input[type="submit"] {
+	margin-top: 15px;
+}
+
+#textarea_container, #contact_submit {
+	padding: 0 10px;
+}
+
+.entry {
+	padding: 0 10px;
+	width: 50%;
+	min-width: 300px;
+}
+
+
+/* Google maps */
+#map_container p {
+	padding: 20px 0;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
+}
+
+
+/* ---------------------------- Profile page ----------------------------- */
+
+#edit_details_section {
+	background-color: #e0e0e0;
+}
+
+#change_email_container, #change_password_container {
+	width: 50%;
+	min-width: 450px;
+	margin-bottom: 50px;
+}
+
+#change_email_container input[type="submit"], #change_password_container input[type="submit"] {
+	margin-top: 10px;
+}
+
+.field {
+	padding: 0 10px;
+	width: 100%;
+	max-width: 400px;
+}
+
+p.outcome {
+	padding: 15px;
+}
+
+/* ---------------------------- Control panel ----------------------------- */
+
+/* Find users styles */
+div#search_box_container {
+	width: 100%;
+	max-width: 600px;
+	margin: 30px auto 0 auto;
+}
+
+table#find_users {
+	margin: 10px auto;
+}
+
+table#find_users tr:hover {
+	background-color: #c4de9f;
+	cursor: pointer;
+}
+
+section#user_details_container {
+	border-bottom: 1px solid #003242;
+}
+
+section.details {
+	background-color: #e0e0e0;
+}
+
+section.details p {
+	padding: 5px 20px;
+	color: #003242;
+	font-size: 22px;
+}
+
+section.details p.last {
+	padding-bottom: 30px;
+}
+
+section.details p span {
+	font-weight: 600;
+}
+
+/* Manage activities styles */
+div#admin_activities {
+	text-align: center;
+}
+
+p.admin_activity {
+	display: inline-block;
+	text-align: center;
+	margin: 30px;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: #01597c;
+}
+
+p.admin_activity:hover {
+	background-color: #003242;
+	cursor: pointer;
+}
+
+p.admin_activity span.admin_activity_id {
+	display: none;
+}
+
+/* ---------------------------- Thank you pages ----------------------------- */
+
+div.thankyou p {
+	text-align: center;
+	padding: 20px;
+}
+
+div.thankyou p a {
+	display: inline-block;
+	width: 300px;
+	padding: 20px;
+	background-color: #01597c;
+	color: #fff;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+div.admin_options p a:hover {
+	background-color: #003242;
+}
+
+
+
+
+/* ---------------------------- Footer ----------------------------- */
+
+footer {
+	background-color: #01597c;
+	color: #fff;
+	margin-top: 50px;
+	padding-top: 25px;
+}
+
+/* Footer menus */
+.footer_menu {
+	width: 33%;
+	text-align: center;
+}
+
+footer ul.menu {
+	display: inline-block;
+}
+
+footer ul.menu li {
+	display: block;
+}
+
+footer ul.menu li a {
+	display: block;
+	padding: 5px 30px;
+	text-decoration: none;
+	color: #fff;
+}
+
+footer ul.menu li a:hover {
+	background-color: #003242;
+}
+
+/* Footer social icons */
+#footer_social_icons {
+	text-align: center;
+	padding: 30px 0;
+	border-bottom: 1px solid #003242;
+}
+
+#footer_social_icons p {
+	display: inline-block;
+	padding: 0 30px;
+}
+
+#footer_social_icons a {
+	text-decoration: none;
+	color: #cecece;
+}
+
+#footer_social_icons a:hover {
+	color: #fff;
+}
+
+#footer_social_icons img {
+	display: inline-block;
+	vertical-align: -10px;
+	padding-right: 10px;
+}
+
+/* Credentials */
+#credentials {
+	padding: 20px 0;
+	text-align: center;
+}
+
+#credentials p {
+	display: inline-block;
+	padding-right: 20px;
+	color: #cecece;
+}
+
+span#designer {
+	color: #fff;
+}
+
+/* --------------------------- Styles for portrait handheld devices --------------------------- */
+
+@media all and (orientation:portrait) {
+
+	/* ------------ Header ------------- */
+
+	#login_icon {
+		position: absolute;
+		z-index: 99;
+		right: 50px;
+		bottom: -145px;
+		width: 120px;
+		height: 120px;
+	}
+
+	#login_options {
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		display: none;
+		width: 100%;
+	}
+
+	#facebook, #twitter {
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		margin: 20px 10px 0 10px;
+	}
+
+	#facebook {
+		background-image: url("../assets/facebook_grey_100.png");
+		background-size: contain;
+	}
+
+	#facebook:hover {
+		background-image: url("../assets/facebook_blue_100.png");
+	}
+
+	#twitter {
+		background-image: url("../assets/twitter_grey_100.png");
+		background-size: contain;
+	}
+
+	#twitter:hover {
+		background-image: url("../assets/twitter_blue_100.png");
+	}
+
+
+	nav ul.menu li {
+		font-size: 1.8em;
+	}
+
+
+	/* ----------- Homepage ------------ */
+
+	div.resource {
+		width: 90%;
+		margin: 0 auto;
+		float: none;
+	}
+
+
+
+	/* ------------ Facilities ------------ */
+
+	.gallery_controls:hover {
+		background-color: transparent;
+	}
+
+	/* ------------ Footer ------------ */
+
+
+	.footer_menu {
+		font-size: 1.5em;
+	}
+
+	footer h5.title {
+		font-size: 1.2em;
+	}
+
+}
+
+
+/* Specific for high resolurion mobile phones */
+@media screen and (min-resolution: 192dpi) {
+
+main p {
+	font-size: 0.8em;
+}
+
+}
+
+
+
+@media screen and (orientation: portrait) and (min-resolution: 192dpi) {
+
+	/* ------------ Universal styles ------------ */
+	nav ul.menu li {
+		font-size: 2.3em;
+	}
+
+	th, td {
+		font-size: 1.8em;
+	}
+
+	label {
+		font-size: 30px;
+	}
+
+	input {
+		font-size: 30px;
+		height: 60px;
+	}
+
+	input[type="submit"] {
+		font-size: 30px;
+		height: 75px;
+	}
+
+	p.error {
+		font-size: 1.5em;
+		height: 40px;
+	}
+
+	/* ------------ Activity page ------------ */
+	div.user_options p a {
+		font-size: 3em;
+	}
+
+	div.admin_options p a {
+		font-size: 3em;
+		width: auto;
+	}
+
+	/* ------------ Admin page ------------ */
+	p.admin_activity {
+		font-size: 1.5em;
+	}
+
+	/* ------------ Contact page -------------- */
+	form#booking_system {
+		font-size: 1.6em;
+	}
+
+	p.contact_info span.tel {
+		font-size: 2.5em;
+	}
+
+	#form_container textarea {
+		min-height: 200px;
+	}
+
+	/* ------------ Thank you pages ------------ */
+	div.thankyou p {
+		font-size: 2em;
+	}
+
+	div.thankyou p a {
+		font-size: 1.5em;
+	}
+
+	/* ------------ Footer ------------ */
+	footer {
+		font-size: 1.4em;
+	}
+
+} 
