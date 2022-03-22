@@ -9,6 +9,7 @@ The backend is coded in PHP and MySQL, and the front end is pure HTML, CSS and J
 Features of the website include:</p>
 
 <ul>
+  <li>Responsive design</li>
   <li>Account creation with member's area</li>
   <li>Admin panel with overview of the activities and members, including ajax livesearch</li>
   <li>Custom made 5 day rolling booking system</li>
