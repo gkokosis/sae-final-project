@@ -16,4 +16,4 @@ Features of the website include:</p>
   <li>Custom contact form</li>
 </ul>
 
-<p>There is a live example of the website <a href="gkokosis.tech/final" target="_blank">here</a></p>
+<p>There is a live example of the website <a href="https://gkokosis.tech/final/" target="_blank" rel="noopener noreferrer">here</a></p>
